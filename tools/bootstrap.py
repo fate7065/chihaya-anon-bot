@@ -63,7 +63,7 @@ def environment(root):
 
 
 def main(argv=None):
-    parser=argparse.ArgumentParser(description='Install or start Anon QQ Companion')
+    parser=argparse.ArgumentParser(description='Install or start Chihaya Anon bot')
     parser.add_argument('action',choices=('install','dashboard','qq','doctor'),nargs='?',default='install')
     parser.add_argument('--review-model',action='store_true')
     parser.add_argument('--voice-options',type=Path)

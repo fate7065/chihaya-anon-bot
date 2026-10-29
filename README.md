@@ -1,6 +1,6 @@
-# 爱音 QQ 陪伴机器人
+# 千早爱音bot
 
-以千早爱音为角色的 QQ 陪伴机器人，使用 DeepSeek 或兼容 API 生成中文聊天回复，支持中文、日语语音，以及上网内容和角色评价的可视化。
+千早爱音bot 是以千早爱音为角色的 QQ bot，使用 DeepSeek 或兼容 API 生成中文聊天回复，支持中文、日语语音，以及上网内容和角色评价的可视化。
 
 ## 功能
 
@@ -51,4 +51,4 @@ sh run.sh dashboard
 
 [DeepSeek API](https://api-docs.deepseek.com/) · [OneBot 11](https://github.com/botuniverse/onebot-11) · [NapCatQQ](https://github.com/NapNeko/NapCatQQ) · [GPT-SoVITS](https://github.com/RVC-Boss/GPT-SoVITS) · [A_memorix](https://github.com/A-Dawn/A_memorix)
 
-本项目为个人角色陪伴软件，与角色版权方、QQ 或 B 站官方没有隶属关系。第三方模型与平台的使用遵循各自的许可和服务约定。
+本项目为个人角色 bot，与角色版权方、QQ 或 B 站官方没有隶属关系。第三方模型与平台的使用遵循各自的许可和服务约定。

@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "anonbot-foundation"
-version = "0.3.0rc1"
-description = "Anon companion with DeepSeek and local OneBot private-message service"
+version = "0.3.0rc2"
+description = "Chihaya Anon bot with DeepSeek and local OneBot private-message service"
 requires-python = ">=3.11"
 dependencies = []
 
