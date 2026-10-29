@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools==82.0.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "anonbot-foundation"
+version = "0.3.0rc1"
+description = "Anon companion with DeepSeek and local OneBot private-message service"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+server = ["uvicorn==0.51.0", "h11==0.16.0", "click==8.3.2"]
+
+[project.scripts]
+anonbot = "anonbot.cli:main"
+anonbot-admin = "anonbot.release.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["anonbot*"]
+
+[tool.setuptools.package-data]
+anonbot = ["persona_anon.json", "persona_anon_natural.json"]
+"anonbot.autonomy" = ["console_web/*.html", "console_web/*.css", "console_web/*.js"]
+"anonbot.release" = ["web/*.html", "web/*.css", "web/*.js"]
+
+[tool.setuptools.data-files]
+"share/anonbot/knowledge/anon" = ["knowledge/anon/corpus.json", "knowledge/anon/unknown_claims.json"]
+
+[tool.unittest]
+start-directory = "tests"

@@ -1,0 +1,6 @@
+{"room": {"platform": "qq", "account_id": "demo-bot", "room_id": "demo-group"}, "message": {"event_id": "1", "sender_id": "alice", "text": "爱音，你觉得这首歌怎么样", "mentioned": true}, "now": 100}
+{"room": {"platform": "qq", "account_id": "demo-bot", "room_id": "demo-group"}, "message": {"event_id": "2", "sender_id": "alice", "text": "小明，明天一起吃饭吧"}, "now": 110}
+{"room": {"platform": "qq", "account_id": "demo-bot", "room_id": "demo-group"}, "message": {"event_id": "3", "sender_id": "alice", "text": "嗯"}, "now": 120}
+{"room": {"platform": "qq", "account_id": "demo-bot", "room_id": "demo-group"}, "message": {"event_id": "4", "sender_id": "alice", "text": "爱音，等一下，我还没说完", "mentioned": true}, "now": 130}
+{"room": {"platform": "qq", "account_id": "demo-bot", "room_id": "demo-group"}, "message": {"event_id": "5", "sender_id": "alice", "text": "爱音？", "mentioned": true}, "now": 141, "last_reply_at": 140}
+{"room": {"platform": "qq", "account_id": "demo-bot", "room_id": "demo-group"}, "message": {"event_id": "1", "sender_id": "alice", "text": "爱音，你觉得这首歌怎么样", "mentioned": true}, "now": 100}

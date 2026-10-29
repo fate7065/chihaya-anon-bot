@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "threshold": 0.7,
+  "cooldown_seconds": 3,
+  "judges": [
+    {
+      "dimension": "address",
+      "type": "compatible",
+      "provider_id": "address-local-example",
+      "base_url": "http://127.0.0.1:8000/v1",
+      "model": "your-small-model",
+      "key_env": "LOCAL_JUDGE_API_KEY",
+      "timeout_seconds": 4
+    },
+    {
+      "dimension": "relevance",
+      "type": "compatible",
+      "provider_id": "relevance-local-example",
+      "base_url": "http://127.0.0.1:8000/v1",
+      "model": "your-small-model",
+      "key_env": "LOCAL_JUDGE_API_KEY",
+      "timeout_seconds": 4
+    },
+    {
+      "dimension": "timing",
+      "type": "compatible",
+      "provider_id": "timing-local-example",
+      "base_url": "http://127.0.0.1:8000/v1",
+      "model": "your-small-model",
+      "key_env": "LOCAL_JUDGE_API_KEY",
+      "timeout_seconds": 4
+    }
+  ]
+}

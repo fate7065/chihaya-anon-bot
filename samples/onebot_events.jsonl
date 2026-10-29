@@ -1,0 +1,5 @@
+{"post_type":"message","message_type":"private","self_id":10000,"user_id":20000,"message_id":101,"message":[{"type":"text","data":{"text":"今天有点累"}}]}
+{"post_type":"message","message_type":"group","self_id":10000,"user_id":20000,"group_id":30000,"message_id":102,"message":[{"type":"text","data":{"text":"大家好"}}]}
+{"post_type":"message","message_type":"group","self_id":10000,"user_id":20000,"group_id":30000,"message_id":103,"message":[{"type":"at","data":{"qq":"10000"}},{"type":"text","data":{"text":"一起练吉他吧"}}]}
+{"post_type":"message","message_type":"group","self_id":10000,"user_id":20000,"group_id":30000,"message_id":103,"message":[{"type":"at","data":{"qq":"10000"}},{"type":"text","data":{"text":"一起练吉他吧"}}]}
+{"post_type":"meta_event","meta_event_type":"heartbeat","self_id":10000}

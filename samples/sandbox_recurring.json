@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "title": "有界周期模拟评论",
+  "steps": [
+    {"id":"comment","tool":"bilibili.comment","account":"sim-bili","target":"BV1bwnF6eEe8","args":{"text":"本地合成周期任务，不是真实评论"}}
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "evidence": {
+    "soyo-distance": "3df7288ee3afeb3912aded01c57821533b4b3caeccc7b2ecdc5f78b553459c0b"
+  },
+  "rules": [
+    {
+      "id": "source-unknown-ack",
+      "evidence_ids": [
+        "soyo-distance"
+      ],
+      "groups": [
+        {
+          "from": "current",
+          "terms": [
+            "资料",
+            "原文",
+            "片段"
+          ]
+        },
+        {
+          "from": "current",
+          "terms": [
+            "没说",
+            "没写",
+            "没提"
+          ]
+        },
+        {
+          "from": "current",
+          "terms": [
+            "不知道",
+            "不清楚",
+            "不确定",
+            "别帮",
+            "别猜",
+            "不猜"
+          ]
+        }
+      ],
+      "reply": "嗯，这点我不知道"
+    },
+    {
+      "id": "nickname-origin-unknown",
+      "evidence_ids": [
+        "soyo-distance"
+      ],
+      "groups": [
+        {
+          "from": "subject",
+          "terms": [
+            "そよりん",
+            "昵称",
+            "称呼",
+            "叫法"
+          ]
+        },
+        {
+          "from": "current",
+          "terms": [
+            "原因",
+            "为什么",
+            "由来",
+            "来源",
+            "造词",
+            "怎么来",
+            "怎么造",
+            "怎么取",
+            "怎么起"
+          ]
+        }
+      ],
+      "reply": "起这个叫法的原因我不确定"
+    },
+    {
+      "id": "nickname-attitude-unknown",
+      "evidence_ids": [
+        "soyo-distance"
+      ],
+      "groups": [
+        {
+          "from": "subject",
+          "terms": [
+            "そよりん",
+            "昵称",
+            "称呼",
+            "叫法"
+          ]
+        },
+        {
+          "from": "current",
+          "terms": [
+            "喜欢",
+            "接受",
+            "默认",
+            "开心",
+            "内心",
+            "心理",
+            "怎么想"
+          ]
+        }
+      ],
+      "reply": "那段只看到她让我停下，喜不喜欢真看不出来"
+    }
+  ]
+}

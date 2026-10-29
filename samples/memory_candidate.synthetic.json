@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "origin": "synthetic",
+  "cases": [
+    {"name":"friend-a","scope":{"bot_id":"90001","persona_id":"anon","owner_id":"10001"},"kind":"user_statement",
+     "memories":[{"event_id":"a-tea","text":"我喜欢乌龙茶，不加糖","speaker_id":"10001","observed_at":"2026-10-29T09:00:00+08:00"}],
+     "queries":[{"text":"乌龙茶","expected_event_ids":["a-tea"]},{"text":"火星基地","expected_event_ids":[]}]},
+    {"name":"friend-b","scope":{"bot_id":"90001","persona_id":"anon","owner_id":"10002"},"kind":"user_statement",
+     "memories":[{"event_id":"b-tea","text":"我不喜欢乌龙茶，喜欢柠檬水","speaker_id":"10002","observed_at":"2026-10-29T09:01:00+08:00"}],
+     "queries":[{"text":"乌龙茶","expected_event_ids":["b-tea"]}]},
+    {"name":"group-a","scope":{"bot_id":"90001","persona_id":"anon","owner_id":"10001","scene":"group:20001"},"kind":"user_statement",
+     "memories":[{"event_id":"group-tea","text":"群里说的乌龙茶是给社团活动准备的","speaker_id":"10001","observed_at":"2026-10-29T09:02:00+08:00"}],
+     "queries":[{"text":"乌龙茶","expected_event_ids":["group-tea"]}]},
+    {"name":"other-bot","scope":{"bot_id":"90002","persona_id":"anon","owner_id":"10001"},"kind":"user_statement","memories":[],
+     "queries":[{"text":"乌龙茶","expected_event_ids":[]}]},
+    {"name":"other-persona","scope":{"bot_id":"90001","persona_id":"other","owner_id":"10001"},"kind":"user_statement","memories":[],
+     "queries":[{"text":"乌龙茶","expected_event_ids":[]}]},
+    {"name":"character-daily","scope":{"bot_id":"90001","persona_id":"anon","owner_id":"10001"},"kind":"character_daily",
+     "memories":[{"event_id":"anon-tea","text":"今天练完吉他想喝一杯乌龙茶","speaker_id":"90001","observed_at":"2026-10-29T09:03:00+08:00"}],
+     "queries":[{"text":"乌龙茶","expected_event_ids":["anon-tea"]}]},
+    {"name":"empty-friend","scope":{"bot_id":"90001","persona_id":"anon","owner_id":"10003"},"kind":"user_statement","memories":[],
+     "queries":[{"text":"乌龙茶","expected_event_ids":[]}]}
+  ]
+}

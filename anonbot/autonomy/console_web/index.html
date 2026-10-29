@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>爱音工作台 · 读取任务</title>
+  <link rel="stylesheet" href="/app.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#workspace">跳到任务区</a>
+<div class="shell">
+  <aside class="sidebar" aria-label="工作台导航">
+    <div class="brand"><span class="brand-mark" aria-hidden="true">A</span><div><strong>爱音工作台</strong><small>本地任务与工具</small></div></div>
+    <div class="nav-label">工作空间</div>
+    <a class="nav-item" href="#workspace" aria-current="page"><span aria-hidden="true">▤</span> 读取任务</a>
+    <section class="capabilities" aria-labelledby="cap-title"><h2 id="cap-title">已接入功能</h2><p><span class="dot"></span>B站搜索与详情</p><p><span class="dot muted"></span>安卓读取演示</p><small>安卓实机操作待验证</small></section>
+    <div class="sidebar-foot"><span class="local-icon" aria-hidden="true">●</span> 仅在本机运行</div>
+  </aside>
+  <main id="workspace">
+    <header class="page-header"><div><div class="eyebrow">WORKSPACE / TASKS</div><h1>读取任务</h1><p>把读取交给工具，把进度留在这里</p></div><button id="refresh" class="quiet" type="button">刷新状态</button></header>
+    <div id="error" role="alert" class="error" hidden></div>
+    <div id="message" role="status" class="message" aria-live="polite"></div>
+    <section class="composer" aria-labelledby="new-title">
+      <div class="composer-heading"><div><h2 id="new-title">查一份 B站资料</h2><p>搜索关键词，再读取首条结果的详情</p></div><span class="pill">只读功能</span></div>
+      <form id="task-form">
+        <label for="query">想查什么</label>
+        <div class="query-row"><input id="query" name="query" maxlength="100" required placeholder="例如：千早爱音、MyGO、鲸鱼娘" autocomplete="off"><button id="create" class="primary" type="submit">创建并运行 <span aria-hidden="true">↗</span></button></div>
+        <div class="form-options"><label for="mode">资料来源<select id="mode"><option value="fixture">离线预览</option><option value="live">真实公开查询</option></select></label><label for="budget">本次运行<select id="budget"><option value="10">全部步骤</option><option value="1">只运行一步</option></select></label><p class="form-hint" id="mode-hint">离线预览使用固定示例，不会访问 B站</p></div>
+      </form>
+      <div class="demo-row"><span>想先了解流程？用离线示例体验搜索、详情和截图</span><button id="demo" type="button" class="text-button">体验完整流程 <span aria-hidden="true">→</span></button></div>
+    </section>
+    <div class="workbench">
+      <section class="list-panel" aria-labelledby="list-title"><div class="panel-header"><h2 id="list-title">任务记录 <span id="count">0</span></h2><label class="sr-only" for="filter">筛选任务</label><select id="filter"><option value="all">全部任务</option><option value="active">进行中</option><option value="completed">已完成</option><option value="attention">待继续 / 需处理</option></select></div><div id="task-list" role="list" aria-label="任务列表"><p class="empty">正在读取任务记录…</p></div></section>
+      <section id="task-detail" class="detail-panel" aria-label="任务详情"><div class="detail-empty"><span class="empty-symbol" aria-hidden="true">☷</span><h2>每一步，都有记录</h2><p>创建一个读取任务，或从左侧选择历史任务<br>这里会显示进度、资料与图片</p></div></section>
+    </div>
+    <footer class="page-footer"><span id="connection">正在连接本机服务…</span><span>任务与结果保存在本机</span></footer>
+  </main>
+</div>
+</body>
+</html>

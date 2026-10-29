@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "threshold": 0.7,
+  "cooldown_seconds": 3,
+  "judges": [
+    {
+      "dimension": "address",
+      "type": "rule"
+    },
+    {
+      "dimension": "relevance",
+      "type": "rule"
+    },
+    {
+      "dimension": "timing",
+      "type": "rule"
+    }
+  ]
+}

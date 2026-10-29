@@ -1,0 +1,4 @@
+# Replace with your own hostname and configure the same HTTPS origin in release.json.
+anon.example.com {
+    reverse_proxy 127.0.0.1:8788
+}

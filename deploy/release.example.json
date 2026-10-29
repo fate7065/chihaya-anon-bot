@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "data_dir": "/state",
+  "token_file": "/run/secrets/dashboard_token",
+  "origin": "http://127.0.0.1:8788",
+  "embedding": null,
+  "vision": null
+}

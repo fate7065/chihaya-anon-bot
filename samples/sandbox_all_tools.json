@@ -1,0 +1,130 @@
+{
+  "version": 1,
+  "title": "完整跨平台模拟任务",
+  "steps": [
+    {
+      "id": "search",
+      "tool": "bilibili.search",
+      "account": "sim-bili",
+      "target": "public-search",
+      "args": {
+        "query": "千早爱音"
+      }
+    },
+    {
+      "id": "info",
+      "tool": "bilibili.info",
+      "account": "sim-bili",
+      "target": {
+        "from": "search",
+        "field": "bvid"
+      },
+      "args": {}
+    },
+    {
+      "id": "subtitles",
+      "tool": "bilibili.subtitles",
+      "account": "sim-bili",
+      "target": {
+        "from": "search",
+        "field": "bvid"
+      },
+      "args": {}
+    },
+    {
+      "id": "comment",
+      "tool": "bilibili.comment",
+      "account": "sim-bili",
+      "target": {
+        "from": "search",
+        "field": "bvid"
+      },
+      "args": {
+        "text": "本地模拟评论"
+      }
+    },
+    {
+      "id": "dm",
+      "tool": "bilibili.dm",
+      "account": "sim-bili",
+      "target": "sim-user",
+      "args": {
+        "text": "本地模拟私信"
+      }
+    },
+    {
+      "id": "upload",
+      "tool": "bilibili.upload",
+      "account": "sim-bili",
+      "target": "sim-channel",
+      "args": {
+        "title": "合成演示",
+        "asset": "demo-video"
+      }
+    },
+    {
+      "id": "devices",
+      "tool": "android.devices",
+      "account": "sim-android",
+      "target": "connected-devices",
+      "args": {}
+    },
+    {
+      "id": "inspect",
+      "tool": "android.inspect",
+      "account": "sim-android",
+      "target": "sim-device",
+      "args": {}
+    },
+    {
+      "id": "before",
+      "tool": "android.snapshot",
+      "account": "sim-android",
+      "target": "sim-device",
+      "args": {
+        "expected_package": "tv.danmaku.bili"
+      }
+    },
+    {
+      "id": "tap",
+      "tool": "android.tap",
+      "account": "sim-android",
+      "target": "sim-device",
+      "args": {
+        "x": 120,
+        "y": 240,
+        "expected_package": "tv.danmaku.bili",
+        "expected_revision": 1
+      }
+    },
+    {
+      "id": "type",
+      "tool": "android.type",
+      "account": "sim-android",
+      "target": "sim-device",
+      "args": {
+        "text": "千早爱音",
+        "expected_package": "tv.danmaku.bili",
+        "expected_revision": 2
+      }
+    },
+    {
+      "id": "after",
+      "tool": "android.snapshot",
+      "account": "sim-android",
+      "target": "sim-device",
+      "args": {
+        "expected_package": "tv.danmaku.bili"
+      }
+    },
+    {
+      "id": "reply",
+      "tool": "qq.group.send",
+      "account": "sim-qq",
+      "target": "sim-room",
+      "args": {
+        "text": "模拟任务已处理，可查看本地记录"
+      }
+    }
+  ]
+}

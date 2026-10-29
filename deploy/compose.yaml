@@ -1,0 +1,59 @@
+name: anonbot
+services:
+  activity:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    image: anonbot:0.3.0rc1
+    command: [python, -m, anonbot.release, dashboard, --config, /config/release.json, --internal-port, '8788']
+    restart: unless-stopped
+    read_only: true
+    init: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    # Host networking is Linux-only; receiver and NapCat remain loopback-only.
+    network_mode: host
+    volumes:
+      - ./local/config:/config:ro
+      - ./local/state:/state
+    secrets: [dashboard_token]
+    tmpfs: [/tmp:size=32m,noexec,nosuid]
+    pids_limit: 128
+    mem_limit: 256m
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8788/healthz',timeout=3).close()"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+    logging:
+      options: {max-size: 10m, max-file: '3'}
+  qq:
+    profiles: [qq]
+    image: anonbot:0.3.0rc1
+    restart: unless-stopped
+    init: true
+    read_only: true
+    network_mode: host
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    volumes:
+      - ./local/config:/config:ro
+      - ./local/state:/state
+    secrets: [chat_key, gateway_token, webhook_secret]
+    tmpfs: [/tmp:size=32m,noexec,nosuid]
+    # Explicit deployment opt-in; defaults to mock/no-send until operator changes it.
+    command: [python, -m, anonbot.release, worker, --config, /config/worker.json]
+    pids_limit: 128
+    mem_limit: 512m
+    logging:
+      options: {max-size: 10m, max-file: '3'}
+secrets:
+  dashboard_token:
+    file: ./local/secrets/dashboard.key
+  chat_key:
+    file: ./local/secrets/chat.key
+  gateway_token:
+    file: ./local/secrets/gateway.key
+  webhook_secret:
+    file: ./local/secrets/webhook.key

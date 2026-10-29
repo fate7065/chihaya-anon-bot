@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "workflow_id": "public-video-research",
+  "steps": [
+    {"id": "find", "tool": "bilibili.search", "args": {"query": "deepseek鲸鱼娘在运行", "limit": 3}},
+    {"id": "detail", "tool": "bilibili.info", "args": {},
+     "bindings": {"bvid": {"step": "find", "path": ["items", 0, "bvid"]}}}
+  ]
+}

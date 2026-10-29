@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "origin": "synthetic",
+  "events": [
+    {"at":0,"room":"direct","message":{"event_id":"d1","sender_id":"summer","text":"爱音，练吉他老是按错弦，你会先慢练还是整首弹","mentioned":true}},
+    {"at":2,"room":"direct","message":{"event_id":"d2","sender_id":"summer","text":"我试一下","reply_to_bot":true}},
+    {"at":5,"room":"direct","message":{"event_id":"d3","sender_id":"summer","text":"慢下来确实好点，但一加速又乱了","reply_to_bot":true}},
+    {"at":10,"room":"peers","message":{"event_id":"p1","sender_id":"alice","text":"小夏，明天一起去便利店吗"}},
+    {"at":10.2,"room":"peers","message":{"event_id":"p2","sender_id":"summer","text":"行啊，放学后门口见"}},
+    {"at":20,"room":"burst","message":{"event_id":"b1","sender_id":"alice","text":"爱音，帮我看一下","mentioned":true}},
+    {"at":20.2,"room":"burst","message":{"event_id":"b2","sender_id":"alice","text":"我还没说完"}},
+    {"at":20.4,"room":"burst","message":{"event_id":"b3","sender_id":"alice","text":"先别回，等我把后半句打完","mentioned":true}},
+    {"at":30,"room":"cancel","message":{"event_id":"c1","sender_id":"bob","text":"爱音，你知道吉他拨片放哪了吗","mentioned":true}},
+    {"at":31.8,"room":"cancel","message":{"event_id":"c2","sender_id":"bob","text":"找到了，不用回了"}},
+    {"at":40,"room":"self","message":{"event_id":"s1","sender_id":"sim-bot","text":"我刚发过一条，不要回复自己"}},
+    {"at":48,"room":"quote","message":{"event_id":"q0","sender_id":"sim-bot","text":"先把速度放慢，按稳了再提速"}},
+    {"at":50,"room":"quote","message":{"event_id":"q1","sender_id":"mio","text":"你刚才说慢练，那每次练多久比较合适","reply_to_bot":true}}
+  ]
+}

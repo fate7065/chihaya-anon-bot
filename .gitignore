@@ -1,0 +1,16 @@
+.venv/
+local/
+data/
+runtime/
+models/
+__pycache__/
+*.py[cod]
+*.key
+*.dpapi
+*.sqlite3*
+*.log
+.env
+.env.*
+build/
+dist/
+*.egg-info/

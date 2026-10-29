@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "settings": {
+    "bot_id": "10000",
+    "allowed_users": [],
+    "private_mode": "allowlist",
+    "base_url": "https://api.deepseek.com",
+    "model": "deepseek-flash",
+    "gateway_url": "http://127.0.0.1:3000",
+    "port": 8765,
+    "calls_per_hour": 60
+  },
+  "data_dir": "/state",
+  "api_key_file": "/run/secrets/chat_key",
+  "gateway_token_file": "/run/secrets/gateway_token",
+  "webhook_secret_file": "/run/secrets/webhook_secret"
+}
